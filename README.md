@@ -4,5 +4,5 @@ This is just a fun little script to generate random release names based on anima
 
 ## Usage
 ```
-$ generate_release_name 
+$ ./generate_release_name 
 ```
