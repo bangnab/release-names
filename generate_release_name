@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-
+cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 IFS=$'\n' read -d '' -r -a animals < animals
 
 IFS=$'\n' read -d '' -r -a adjectives < adjectives
@@ -9,3 +9,4 @@ nbAdjectives=${#adjectives[@]}
 selectedAnimal=${animals[$(($RANDOM % nbAnimals))]}
 selectedAdjective=${adjectives[$(($RANDOM % nbAdjectives))]}
 echo "${selectedAdjective}_${selectedAnimal}"
+cd - > /dev/null
